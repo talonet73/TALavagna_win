@@ -1,0 +1,36 @@
+{
+  "name": "talavagna",
+  "productName": "TALavagna",
+  "version": "1.1.0",
+  "description": "TALavagna - dashboard desktop con finestre flottanti: Gmail, Outlook, WhatsApp, calendari, siti, webcam, blocco idee",
+  "main": "main.js",
+  "author": "TAL",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win zip portable"
+  },
+  "devDependencies": {
+    "electron": "39.8.10",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "it.tal.talavagna",
+    "productName": "TALavagna",
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json",
+      "src/**",
+      "build/icon.*"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "zip",
+        "portable"
+      ]
+    },
+    "artifactName": "TALavagna-${version}-Windows.${ext}"
+  }
+}
